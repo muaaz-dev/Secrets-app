@@ -39,7 +39,7 @@ app.use(passport.session());
 
 // Database connection
 async function connectDB() {
-  const conn = await mongoose.connect("mongodb+srv://devmuaaz:Morris%40h0me@cluster0.q6p9bdn.mongodb.net/secretsDB");
+  const conn = await mongoose.connect("mongodb+srv://devmuaaz:" + process.env.PASSWORD_DB + "@cluster0.q6p9bdn.mongodb.net/secretsDB");
   console.log("Database connected!");
 }
 
